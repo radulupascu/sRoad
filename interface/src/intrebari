@@ -1,0 +1,39 @@
+const [questions] = useState([
+        {
+          questionText: 'What would you say is your level of expertise in cybersecurity?',
+          answerOptions: ['Begginer', 'Intermediate', 'Advanced'],
+        },
+        {
+          questionText: 'What would you say',
+          answerOptions: ['Charles Babbage', 'Alan Turing', 'Bill Gates', 'Steve Jobs'],
+        },
+        // ... any other questions you have
+      ]);
+
+      return (
+        <div className="quiz">
+          {showSummary ? (
+            <div className="summary-section">
+              Thank you for completing the quiz!
+              {/* You can add a button or link here to restart or exit the quiz */}
+            </div>
+          ) : ( //render questions
+            <div>
+              <div className="question-section">
+                <div className="question-count">
+                  <span>Question {currentQuestion + 1}</span>
+                </div>
+                <div className="question-text">{questions[currentQuestion].questionText}</div>
+              </div>
+              <div className="answer-section">
+                {questions[currentQuestion].answerOptions.map((answerOption, index) => (
+                  <button key={index} onClick={() => handleAnswerOptionClick(answerOption)}>
+                    {answerOption}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      );
+    }

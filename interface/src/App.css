@@ -1,0 +1,241 @@
+/*app*/
+.App {
+  text-align: center;
+  background-color: #f2f2f2; /* Soft grayish-white background */
+  min-height: 100vh;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #8b0000; /* Dark red header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #f2f2f2; /* Grayish-white text for contrast */
+}
+
+.App-link {
+  color: #c21807; /* Red for links */
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*NewUserEval*/
+
+.question-section {
+  font-size: x-large;
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.question-text {
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+}
+
+.answer-section {
+  font-size: x-large;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns items to the start of the container */
+}
+
+.answer-section button {
+  background-color: #c21807; /* Red background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 15px 20px;
+  margin-bottom: 3vh; /* Space between buttons */
+  cursor: pointer;
+  text-align: center;
+  font-size: large;
+  width: 45%; /* Full width buttons */
+}
+
+.answer-section button:hover {
+  background-color: #d32f2f; /* Slightly lighter red on hover */
+}
+
+/*Header*/
+.header {
+  background: linear-gradient(to right, #8b0000, #f2f2f2); /* Gradient from dark red to grayish-white */
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.home-button {
+  font-size: large;
+  color: #fff; /* White text for visibility */
+  background-color: #c21807; /* Red background for buttons */
+  border: none;
+  padding: 10px 20px;
+  margin-left: 15px; /* Start at 10vw from the left */
+  margin-right: 10vw; /* 15px space between buttons */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.about-us-button {
+  font-size: large;
+  color: #fff; /* White text for visibility */
+  background-color: #c21807; /* Red background for buttons */
+  border: none;
+  padding: 10px 20px;
+  margin-left: 9.7vw;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sign-in-button
+{
+  font-size: large;
+  margin-left: 48vw; /* Adjust spacing as needed */
+  margin-right: 15px;
+  padding: 10px 20px;
+  background-color: #c21807;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.about-us-button:hover, .home-button:hover, .sign-in-button:hover {
+  background-color: #d32f2f; /* Lighter red on hover */
+  color: #fff;
+}
+
+.app-name
+{
+  margin-left: auto;
+  margin-right: 10vw;
+  font-size: large;
+  color: #4e0a04; /* Dark red text color */
+  font-weight: bold; /* Bold text */
+  letter-spacing: 2px; /* Increase letter spacing for visibility */
+}
+
+/*Chatbox*/
+.chat-app-container {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  max-width: 80vw;
+  margin: auto;
+  background-color: #f2f2f2; /* White background for the chat container */
+}
+
+.chat-container {
+  margin-top: 2vh;
+  flex-grow: 1;
+  overflow-y: auto;
+  border: 1px solid #ddd; /* Light border for separation */
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.chat-message {
+  margin-top: 0.4cm;
+  font-size: large;
+  text-align: left;
+  margin-left: 2vw;
+}
+
+.input-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2; /* Soft grayish-white background */
+}
+
+.input-container input {
+  flex-grow: 1;
+  font-size: x-large;
+  padding: 10px;
+  border: 1px solid #ccc; /* Soft border color */
+  margin-right: 10px;
+  width: calc(100% - 120px);
+}
+
+.input-container button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #c21807; /* Consistent red background for buttons */
+  color: white; /* White text for contrast */
+  font-size: x-large;
+}
+
+/*Auth page*/
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.auth-card {
+  background: #ffffff;
+  padding: 3rem; /* Increased padding */
+  border-radius: 8px; /* More pronounced rounded corners */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  width: 450px; /* Slightly wider card */
+  text-align: center;
+  margin: auto;
+}
+
+.input-email, .input-password {
+  width: calc(100% - 1.6rem); /* Adjust width to account for padding */
+  padding: 1rem;
+  margin: 1rem 0; /* Increased margin */
+  border: 2px solid #e2e8f0; /* Lighter border color */
+  border-radius: 0.5rem; /* Rounded corners */
+  box-sizing: border-box;
+}
+
+.remember-me {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 1.5rem 0; /* Increased margin */
+}
+
+
+.sign-up {
+  font-size: large;
+  color: #fff; /* White text for visibility */
+  background-color: #c21807; /* Red background for buttons */
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+.sign-in {
+  color: #2d88ff; /* Same blue shade as the button */
+  cursor: pointer;
+  font-weight: bold; /* Bold font for emphasis */
+  text-decoration: underline; /* Underline to indicate it's clickable */
+  margin-left: 0.5rem; /* Space from text to link */
+}
